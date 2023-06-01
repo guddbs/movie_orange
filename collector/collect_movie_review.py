@@ -25,15 +25,12 @@ from db.movie_crud import add_review
 # 2. chrome driver 다운로드 후 주입(구버전)
 # 주소 : https://sites.google.com/chromium.org/driver/
 
-
+driver = webdriver.Chrome()
 
 
 options = Options()
 options.add_experimental_option("detach", True)   # ChromeDriver 자동종료 X
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-
-
-
 
 ######################################
 # 2. Open URL in ChromeDriver #
@@ -98,11 +95,11 @@ for i,review_box in enumerate(review_list):
 # MongoDB 저장
 # - JSON type(Dict) 전달
     data = {
-    "title": title,
-    "review": review,
-    "score": score,
-    "writer": writer,
-    "regdate": review_date
+        "title": title,
+        "review": review,
+        "score": score,
+        "writer": writer,
+        "regdate": review_date
     }
     add_review(data)
 
