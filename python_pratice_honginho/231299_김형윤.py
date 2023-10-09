@@ -6,8 +6,9 @@ print(a)
 print(b)
 print(c)
 
-
-for i in range(1,100):
+count = 0
+while True:
+    count += 1
     d = int(input("선택: "))  #d는 어떤 항목을 선택할지 결정하는 변수다.
     if d == 1:
         count = 0  # 초기화
@@ -15,14 +16,11 @@ for i in range(1,100):
             k = int(input("시뮬레이션 횟수를 정수로 입력하세요 (단 10^6 이상): "))
             count += 1
             if k >= 10**6:
-                for j in range(5):
-                    rand = random.random()
-                    # print(rand)
-                cnt=0
-                for q in range(k):
-                    x=random.uniform(-1,1)  # x좌표 설정
-                    y=random.uniform(-1,1)  # y좌표 설정
-                    if x*x + y*y <= 1:  # 원의 방정식 안에서의 값만 고려
+                cnt = 0
+                for j in range(k):
+                    x = random.random()
+                    y = random.random()
+                    if x*x + y*y <= 1:
                         cnt +=1
                 pi = (cnt/k)*4
                 print(f"10000000번 시행 후 파이는 {pi}(으)로 계산되었습니다.")
