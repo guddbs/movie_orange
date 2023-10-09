@@ -15,15 +15,15 @@ while True:
         while True:
             k = int(input("시뮬레이션 횟수를 정수로 입력하세요 (단 10^6 이상): "))
             count += 1
-            if k >= 10**6:
+            if k >= 10 ** 6:
                 cnt = 0
                 for j in range(k):
                     x = random.random()
                     y = random.random()
-                    if x*x + y*y <= 1:
-                        cnt +=1
-                pi = (cnt/k)*4
-                print(f"10000000번 시행 후 파이는 {pi}(으)로 계산되었습니다.")
+                    if x * x + y * y <= 1:
+                        cnt += 1
+                pi = (cnt / k) * 4
+                print(f"{k}번 시행 후 파이는 {pi}(으)로 계산되었습니다.")
                 print("프로그램이 종료되었습니다.")
                 break  # 반복문 탈출
             elif k < 10**6:
@@ -40,8 +40,8 @@ while True:
                 operator = input("연산자 (+, -, * 중 선택):")  # operator는 연산자 변수
                 cnt += 1
                 if "+" in operator:  # operator 안에 +가 있다는 조건
-                    result_a = a1 +a2
-                    result_b = b1 +b2
+                    result_a = a1 + a2
+                    result_b = b1 + b2
                     result_c = c1 + c2
                     if result_b >= 0 and result_c >=0:  # 둘 다 0보다 크거나 같은 조건
                         print(f"결과=({result_a}x^2+{result_b}x+{result_c})")
