@@ -61,11 +61,11 @@ while True:
                     result_c = c1 - c2
                     if result_b >= 0 and result_c >=0:  # +일 때와 동일
                         print(f"결과=({result_a}x^2+{result_b}x+{result_c})")
-                    elif result_b < 0:
+                    elif result_b < 0 and result_a <0:
                         print(f"결과=({result_a}x^2-{abs(result_b)}x+{result_c})")
-                    elif result_c < 0:
+                    elif result_c < 0 and result_a<0:
                         print(f"결과=({result_a}x^2+{result_b}x-{abs(result_c)})")
-                    elif result_b <0 and result_c<0:
+                    elif result_b <0 and result_c<0 and result_a<0:
                         print(f"결과=({result_a}x^2-{abs(result_b)}x-{abs(result_c)})")
                     else:
                         print(f"결과=({result_a}x^2+{result_b}x+{result_c})")
