@@ -1,5 +1,4 @@
 import random
-
 a = "1. 몬테카를로 시뮬레이션으로 파이 계산"
 b = "2. 다항식 연산"
 c = "0. 프로그램 종료"
@@ -8,8 +7,8 @@ print(b)
 print(c)
 
 
-for i in range(1,3):
-    d = int(input("선택: "))
+for i in range(1,100):
+    d = int(input("선택: "))  #d는 어떤 항목을 선택할지 결정하는 변수다.
     if d == 1:
         count = 0  # 초기화
         while True:
